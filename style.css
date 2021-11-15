@@ -16,9 +16,9 @@
 
 /*
 	TODO: update random-mondrians repo and get it cleaned up
-	TODO: try this out on github pages ??
-	TODO: my own email?
-	TODO: make a freakin decision about off-site links being blue or green on hover !!
+	TODO: figure out what on earth is going on in safari
+	TODO: remove horizontal scroll on mobile (is this a safari thing)
+	TODO: get a linter set up
 */
 
 /* ~*~*~*~*~*~* General styles *~*~*~*~*~*~ */
@@ -31,6 +31,12 @@
 	--primary-site-color:   #849468;		/* green */
 	--secondary-site-color: #54A4CC;		/* blue */
 
+	/*⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\
+	|	Styling for links:                                                        |
+	|	– Links that take the user to a new page / off-site appear blue on hover  |
+	|	– Links that keep the user on page appear green on hover                  |
+	\____________________________________________________________________________*/
+
 	/* Font sizes */
 	--small-font:  16px;
 	--medium-font: 20px;
@@ -38,6 +44,7 @@
 	--title-font:  85px;
 
 	--primary-border-radius: 20px;
+	--hover-transition-time: 0.2s;
 }
 
 /* Make text a lil smaller for iPads & smaller computer screens */
@@ -144,7 +151,7 @@ nav a {
 	width: 100%;
 	text-decoration: none;
 	color: var(--primary-site-color);
-	transition: 0.2s;
+	transition: var(--hover-transition-time);
 }
 
 nav a:hover {
@@ -229,7 +236,7 @@ label {
 
 label:hover {
 	color: var(--primary-site-color);
-	transition: 0.2s;
+	transition: var(--hover-transition-time);
 	cursor: pointer;
 }
 
@@ -257,6 +264,15 @@ label:hover {
 }
 
 /* ===== SECTIONS: HOME ===== */
+#home #headshot-phrase {
+	text-decoration: underline;
+	transition: var(--hover-transition-time);
+}
+
+#home #headshot-phrase:hover {
+	color: var(--primary-site-color);
+}
+
 #home .headshot-initial-state {
 	opacity: 0;
 }
@@ -316,25 +332,28 @@ label:hover {
 }
 
 #home a {
-	text-decoration: none;
 	color: black;
-	transition: 0.1s;
+	transition: var(--hover-transition-time);
 }
 
+/* Don't do the headshot on mobile, too cluttery */
 @media only screen and (max-width: 524px) {
 	#home #headshot {
-		left: 10px;
-		top: 310px;
+		display: none;
 	}
 
-	#home a {
-		text-decoration: underline;
+	#home #headshot-phrase {
+		text-decoration: none;
+	}
+
+	#home #headshot-phrase:hover {
+		color: black;
 	}
 }
 
 #home a:hover {
-	color: var(--primary-site-color);
-	transition: 0.1s;
+	color: var(--secondary-site-color);
+	transition: var(--hover-transition-time);
 }
 
 /* ===== SECTIONS: PROGRAMMING ===== */
@@ -356,7 +375,7 @@ label:hover {
 
 #programming p > a:hover {
 	color: var(--secondary-site-color);
-	transition: 0.2s;
+	transition: var(--hover-transition-time);
 }
 
 input[id=programming-toggle-1]:checked ~ #ptd-1 {
@@ -371,6 +390,7 @@ input[id=programming-toggle-2]:checked ~ #ptd-2 {
 
 input[id=programming-toggle-3]:checked ~ #ptd-3 {
 	margin: 0 20px;
+	margin-bottom: 20px;
 	display: inline-block;
 }
 
@@ -386,14 +406,14 @@ input[id=programming-toggle-3]:checked ~ #ptd-3 {
 }
 
 #writing p > a {
-	text-decoration: none;
+/*	text-decoration: none;*/
 	font-size: var(--large-font);
 	color: black;
 }
 
 #writing p > a:hover {
 	color: var(--secondary-site-color);
-	transition: 0.2s;
+	transition: var(--hover-transition-time);
 }
 
 #writing .writing-ex {
@@ -404,9 +424,14 @@ input[id=programming-toggle-3]:checked ~ #ptd-3 {
 }
 
 #writing .writing-ex > a {
+	text-decoration: none;
 	font-size: var(--medium-font);
 	color: black;
 	font-style: normal;
+}
+
+#writing .writing-ex:last-child {
+	margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 524px) {
@@ -450,12 +475,12 @@ section .a-kind-word p {
 
 section .a-kind-word a {
 	color: black;
-	transition: 0.2s;
+	transition: var(--hover-transition-time);
 }
 
 section .a-kind-word a:hover {
-	color: var(--primary-site-color);
-	transition: 0.2s;
+	color: var(--secondary-site-color);
+	transition: var(--hover-transition-time);
 }
 
 .bq-subtitle {
@@ -504,14 +529,13 @@ section .a-kind-word a:hover {
 /* ===== SECTIONS: CONTACT ===== */
 
 #contact > p > a {
-	text-decoration: none;
 	font-size: var(--large-font);
 	color: black;
 }
 
 #contact > p > a:hover {
-	color: var(--primary-site-color);
-	transition: 0.2s;
+	color: var(--secondary-site-color);
+	transition: var(--hover-transition-time);
 }
 
 
