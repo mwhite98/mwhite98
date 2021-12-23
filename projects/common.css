@@ -1,0 +1,154 @@
+/* 
+   ~*~*~*~*~*~* Table of Contents *~*~*~*~*~*~ 
+   Cmd+F these titles to jump to each section of the style sheet.
+   1. General styles
+   2. Main
+*/
+
+/* ~*~*~*~*~*~* General styles *~*~*~*~*~*~ */
+
+:root {
+	/* Colours */
+	--beige:                #FFFBF0;
+	--light-grey: 			#D6D5D5;
+	--dark-grey: 			#5E5E5E;
+	--primary-site-color:   #849468;		/* green */
+	--secondary-site-color: #54A4CC;		/* blue */
+
+	/* Font sizes */
+	--small-font:  16px;
+	--medium-font: 20px;
+	--large-font:  32px;
+	--title-font:  85px;
+
+	--primary-border-radius: 20px;
+	--hover-transition-time: 0.2s;
+}
+
+/* Make text a lil smaller for iPads & smaller computer screens */
+@media only screen and (max-width: 724px) {
+	:root {
+		--small-font:  16px;
+		--medium-font: 20px;
+		--large-font:  28px;
+		--title-font:  60px;
+	}
+}
+
+/* A little smaller for mobile! */
+@media only screen and (max-width: 524px) {
+	:root {
+		--large-font:  20px;
+		--title-font:  40px;
+	}
+}
+
+@font-face {
+	font-family: Perfect-Regular;
+	src: url('../Perfect-Regular.ttf');
+}
+
+body {
+	margin: 0;
+	background-color: var(--beige);
+	font-family: "Helvetica Neue", Helvetica, sans-serif, "Helvetica Roman", Icons;
+}
+
+.centre-items {
+	text-align: center;
+}
+
+/* ~*~*~*~*~*~* Main *~*~*~*~*~*~ */
+
+div.wrapper {
+	max-width: 1000px;
+	margin: auto;
+	padding-bottom: 20px;
+}
+
+header {
+	font-size: var(--title-font);
+	font-family: Perfect-Regular;
+	color: var(--primary-site-color);
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+main {
+	padding: 5px;
+}
+
+p {
+	font-size: var(--large-font);
+}
+
+p > a {
+	color: black;
+}
+
+p > a:hover {
+	color: var(--secondary-site-color);
+	transition: var(--hover-transition-time);
+}
+
+p > a:active {
+	color: var(--secondary-site-color);
+	transition: var(--hover-transition-time);
+}
+
+figure {
+	margin: 20px auto;
+	width: 75%;
+}
+
+figure img {
+	width: 100%;
+	border-radius: var(--primary-border-radius);
+}
+
+figure figcaption {
+	text-align: center;
+	font-style: italic;
+	font-size: var(--medium-font);
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,7 +32,7 @@ function docReady(func) {
 
 // TODO only for dev pruposes
 docReady(function() {
-  sectionHome.classList.toggle("hidden");
+  sectionProgramming.classList.toggle("hidden");
 });
 
 navHome.addEventListener("click", function() {
