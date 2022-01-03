@@ -1,0 +1,292 @@
+/* 
+   ~*~*~*~*~*~* Table of Contents *~*~*~*~*~*~ 
+   Cmd+F these titles to jump to each section of the style sheet.
+   1. General styles
+   2. Left Column
+   	  - LC Images
+   	  - Welcome to my playground!
+   	  - Guidelines for handling informative websites
+   	  - Summer harvest
+   3. Centre Column
+      – 
+   4. Right Column
+      - 
+*/
+
+/* ~*~*~*~*~*~* General styles *~*~*~*~*~*~ */
+
+:root {
+	--bt1-1-color:   #FD5A63; /* Reddish-pink  left row       first block   */
+	--bt1-1-tint:    #FE989E;
+	--bt2-1-color:   #8AE3FD; /* Blue          left row       second block  */
+	--bt2-1-tint:    #C5F1FE;
+	--bt3-1-color: 	 #FDA35A; /* Orange		   left row       third block   */
+
+	/* Font sizes */
+	--small-font: 14px;
+	--medium-font: 16px;
+
+	--hover-transition-time: 0.2s;
+
+/*
+	--bt1-2-color:   #5AFDA3;  Teal          middle row     second block            
+	--bt1-2-tint:    #ACFED1;
+	--bt1-3-color:   #FDA48A;  Peach         right row      third block             
+	--bt2-2-color:   #B69DFD;  Purple        left row       third block
+	--bt2-2-comp:    #E4FD9D;
+	--bt2-3-color:   #FD9DB4;  Pink          middle row     first block
+	--bt2-3-tint:    #FEC2D0;
+	--bt2-5-color:   #FD5A63;  Reddish-pink  right row      second block  in middle
+	--bt2-6-color:   #FDE5D8;  Light peach   bottom column
+	--bt2-6-shade:   #F79563;
+	--bt2-6-shade-2: #FABD9E;
+	--bt3-1-color:   #63DAFC;  Blue          middle row     third block
+	--bt3-2-color:   #57DD4F;  Green         right row      second block  on left
+	--bt3-3-color:   #F7CAD5;  Pink          right row      second block  on right  
+*/
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	background: linear-gradient(45deg, #2BFF88, #85FFBD, #FFFB7D, #F7CE68, #FBAB7E, #FFDEE9, #FFBBEC, #B5FFFC, #2BD2FF);
+	font-family: Helvetica, sans-serif;
+	font-size: var(--medium-font);
+	/* TODO second bkgd? */
+	background-repeat: no-repeat;
+    background-attachment: fixed;	
+}
+
+main {
+	width: 100%;
+/*	max-width: 2560px;*/
+	margin: auto;
+	display: grid;
+	grid-template-columns: 20% 45% auto;
+}
+
+@media only screen and (max-width: 700px) {
+	main {
+		grid-template-columns: auto;
+	}
+}
+
+.flexholder {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.box_type_1 {
+	width: calc(100% - 4px);
+	background-color: white;
+	margin: 4px auto;
+}
+
+.bt1_header {
+	color: white;
+	padding: 2px;
+	font-weight: bold;
+}
+
+.box_type_1 p {
+	padding-left: 2px;
+	margin: 1px 0 0;
+}
+
+.box_type_2 {
+	width: calc(100% - 7px);
+	margin: 5px auto;
+	border-top: solid 1px white;
+	border-right: solid 1px white;
+	border-bottom: solid 1px grey;
+	border-left: solid 1px white;
+	padding: 2px;
+}
+
+.cell {
+	border-top: solid 1px grey;
+	border-right: solid 1px grey;
+	border-bottom: solid 1px white;
+	border-left: solid 1px grey;
+	margin-bottom: 2px;
+	padding: 2px;
+}
+
+.cell:last-child {
+	margin-bottom: 0;
+}
+
+.box_type_3 {
+	border-style: outset;
+	border-width: 3px;
+	width: calc(100% - 10px);
+	padding: 2px;
+	margin: 5px auto;
+/*	text-align: center;
+	font-weight: bold;
+	background-color: white;*/
+}
+
+.column-left, .column-centre, .column-right {
+	padding: 3px;
+	margin: 2px;
+}
+
+/* ~*~*~*~*~*~* Left Column *~*~*~*~*~*~ */
+
+/* ===== LC Images ===== */
+/* Kitties */
+.column-left #img1 {
+	width: 47px;
+	height: 18px;
+	transform: translate(0px, 9px);
+}
+
+.column-left #img2 {
+	width: 59px;
+	height: 24px;
+	transform: translate(0px, 3px);
+}
+/* Star divider */
+.column-left #img3 {
+	width: 50%;
+}
+
+.column-left #img4 {
+	width: 50%;
+}
+
+/* ===== Welcome to my playground! ===== */
+#bt1_1 {
+	border: solid 2px var(--bt1-1-color);
+}
+
+#bt1h_1 {
+	background-color: var(--bt1-1-color);
+}
+
+#bt1_1 p {
+	color: var(--bt1-1-color);
+	border-bottom: solid 2px var(--bt1-1-color);
+}
+
+#bt1_1 a {
+	color: var(--bt1-1-color);
+}
+
+#bt1_1 a:hover {
+	color: var(--bt1-1-tint);
+}
+
+#bt1_1 p:last-child {
+	border-bottom: none;
+}
+
+/* ===== Guidelines for handling informative websites ===== */
+#bt2_1 {
+	background-color: var(--bt2-1-color);
+	width: 100%;
+	margin: 2px auto;
+	border-collapse: separate;
+	border-spacing: 2px;
+	padding-bottom: 0;
+}
+
+#bt2_1 .cell {
+	background-color: white;
+}
+
+#bt2_1 td {
+	font-size: var(--small-font);
+}
+
+#bt2_1 a {
+	color: black;
+	transition: var(--hover-transition-time);
+}
+
+#bt2_1 a:hover {
+	color: var(--bt2-1-tint);
+}
+
+#bt2_1 a:active {
+	color: var(--bt2-1-tint);
+}
+
+#bt2_1 .bt2_1_header {
+	font-weight: normal;
+    text-align: left;
+}
+
+#bt2_1 .bt2_1_icon {
+	background-image: url("assets/bulb.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 0;
+	background-size: 19px;
+    display: inline-block;
+    width: 18px; 
+    height: 18px;
+	content: "";
+}
+
+#bt2_1 .bt2_1_content {
+	width: calc(100% - 32px);
+	float: right;
+}
+
+#bt2_1 #bt2_1_manual_margin {
+	border: solid 0px var(--bt2-1-color);
+}
+
+/* ===== Summer harvest ===== */
+#bt3_1 {
+	width: calc(100% - 10px);
+	background-color: var(--bt3-1-color);
+	font-size: var(--small-font);
+}
+
+#bt3_1 img {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

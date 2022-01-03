@@ -15,7 +15,6 @@
 */
 
 /*
-	TODO: update random-mondrians repo and get it cleaned up
 	TODO: figure out what on earth is going on in safari
 	TODO: remove horizontal scroll on mobile (is this a safari thing)
 	TODO: get a linter set up
@@ -158,6 +157,10 @@ nav a:hover {
 	color: var(--secondary-site-color);
 }
 
+nav a:active {
+	color: var(--secondary-site-color);
+}
+
 .nav-text {
 	/* 
 		NOTE: font-size & -family for .nav-text can be found under styling 
@@ -232,11 +235,16 @@ label {
   	-moz-appearance: button; 
   	display: inline-block;
   	cursor: pointer;
+  	transition: var(--hover-transition-time);
 }
 
 label:hover {
 	color: var(--primary-site-color);
-	transition: var(--hover-transition-time);
+	cursor: pointer;
+}
+
+label:active {
+	color: var(--primary-site-color);
 	cursor: pointer;
 }
 
@@ -356,6 +364,11 @@ label:hover {
 	transition: var(--hover-transition-time);
 }
 
+#home a:active {
+	color: var(--secondary-site-color);
+	transition: var(--hover-transition-time);
+}
+
 /* ===== SECTIONS: PROGRAMMING ===== */
 @media only screen and (min-width: 525px) and (max-width: 1334px) {
 	#programming-content-wrapper {
@@ -371,11 +384,15 @@ label:hover {
 	text-decoration: none;
 	font-size: var(--large-font);
 	color: black;
+	transition: var(--hover-transition-time);
 }
 
 #programming p > a:hover {
 	color: var(--secondary-site-color);
-	transition: var(--hover-transition-time);
+}
+
+#programming p > a:active {
+	color: var(--secondary-site-color);
 }
 
 input[id=programming-toggle-1]:checked ~ #ptd-1 {
@@ -409,11 +426,15 @@ input[id=programming-toggle-3]:checked ~ #ptd-3 {
 /*	text-decoration: none;*/
 	font-size: var(--large-font);
 	color: black;
+	transition: var(--hover-transition-time);
 }
 
 #writing p > a:hover {
 	color: var(--secondary-site-color);
-	transition: var(--hover-transition-time);
+}
+
+#writing p > a:active {
+	color: var(--secondary-site-color);
 }
 
 #writing .writing-ex {
@@ -480,7 +501,10 @@ section .a-kind-word a {
 
 section .a-kind-word a:hover {
 	color: var(--secondary-site-color);
-	transition: var(--hover-transition-time);
+}
+
+section .a-kind-word a:active {
+	color: var(--secondary-site-color);
 }
 
 .bq-subtitle {
@@ -531,51 +555,13 @@ section .a-kind-word a:hover {
 #contact > p > a {
 	font-size: var(--large-font);
 	color: black;
+	transition: var(--hover-transition-time);
 }
 
 #contact > p > a:hover {
 	color: var(--secondary-site-color);
-	transition: var(--hover-transition-time);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#contact > p > a:active {
+	color: var(--secondary-site-color);
+}
