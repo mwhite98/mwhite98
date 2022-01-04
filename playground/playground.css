@@ -8,19 +8,65 @@
    	  - Guidelines for handling informative websites
    	  - Summer harvest
    3. Centre Column
-      – 
+      – CC Images
+      - What’s your vibe? Find some tunes to listen to
+      - Musings on interacting with the Web ...
+      - My dream working environment
+      - The gifs on this page were found using GifCities!
    4. Right Column
-      - 
+      - RC Images
+      - I know you’re busy, but take a moment
 */
+
+/* TODO temp under construction stickers */
+#const1 {
+	position: fixed;
+	top: 5%;
+	left: calc(50% - 400px);
+	width: 800px;
+	z-index: 2;
+}
+
+#const2 {
+	position: fixed;
+	top: 50%;
+	left: calc(20% - 100px);
+	width: 200px;
+	z-index: 2;
+}
+
+#const3 {
+	position: fixed;
+	top: 30%;
+	right: calc(20% - 50px);
+	width: 100px;
+	z-index: 2;
+}
+
+#const4 {
+	position: fixed;
+	bottom: 20%;
+	right: calc(30% - 150px);
+	width: 300px;
+	z-index: 2;
+}
 
 /* ~*~*~*~*~*~* General styles *~*~*~*~*~*~ */
 
 :root {
-	--bt1-1-color:   #FD5A63; /* Reddish-pink  left row       first block   */
+	--bt1-1-color:   #FD5A63; /* Reddish-pink  left row       first block         */
 	--bt1-1-tint:    #FE989E;
-	--bt2-1-color:   #8AE3FD; /* Blue          left row       second block  */
+	--bt2-1-color:   #8AE3FD; /* Blue          left row       second block        */
 	--bt2-1-tint:    #C5F1FE;
-	--bt3-1-color: 	 #FDA35A; /* Orange		   left row       third block   */
+	--bt3-1-color: 	 #FDA35A; /* Orange		   left row       third block         */
+	--bt2-2-color:   #71D271; /* Green         middle row     first block         */
+	--bt2-2-tint:    #CAEECA;
+	--bt1-2-color:   #B69DFD; /* Purple        middle row     second block, left  */
+	--bt1-2-tint:    #DBCEFE;
+	--bt3-2-color:   #FD9DB4; /* Pink          middle row     second block, right */
+	--bt2-3-color:   #8AE3FD; /* Blue          middle row     third block         */
+	--bt2-3-tint:    #C5F1FE;
+	--bt2-4-color:   #FD9DB4; /* Pink          right row      first block.        */
 
 	/* Font sizes */
 	--small-font: 14px;
@@ -32,8 +78,6 @@
 	--bt1-2-color:   #5AFDA3;  Teal          middle row     second block            
 	--bt1-2-tint:    #ACFED1;
 	--bt1-3-color:   #FDA48A;  Peach         right row      third block             
-	--bt2-2-color:   #B69DFD;  Purple        left row       third block
-	--bt2-2-comp:    #E4FD9D;
 	--bt2-3-color:   #FD9DB4;  Pink          middle row     first block
 	--bt2-3-tint:    #FEC2D0;
 	--bt2-5-color:   #FD5A63;  Reddish-pink  right row      second block  in middle
@@ -52,14 +96,12 @@ html, body {
 	background: linear-gradient(45deg, #2BFF88, #85FFBD, #FFFB7D, #F7CE68, #FBAB7E, #FFDEE9, #FFBBEC, #B5FFFC, #2BD2FF);
 	font-family: Helvetica, sans-serif;
 	font-size: var(--medium-font);
-	/* TODO second bkgd? */
 	background-repeat: no-repeat;
     background-attachment: fixed;	
 }
 
 main {
 	width: 100%;
-/*	max-width: 2560px;*/
 	margin: auto;
 	display: grid;
 	grid-template-columns: 20% 45% auto;
@@ -94,6 +136,10 @@ main {
 	margin: 1px 0 0;
 }
 
+.box_type_1 a {
+	transition: var(--hover-transition-time);
+}
+
 .box_type_2 {
 	width: calc(100% - 7px);
 	margin: 5px auto;
@@ -102,6 +148,10 @@ main {
 	border-bottom: solid 1px grey;
 	border-left: solid 1px white;
 	padding: 2px;
+}
+
+.box_type_2 a {
+	transition: var(--hover-transition-time);
 }
 
 .cell {
@@ -126,6 +176,10 @@ main {
 /*	text-align: center;
 	font-weight: bold;
 	background-color: white;*/
+}
+
+.box_type_3 a {
+	transition: var(--hover-transition-time);
 }
 
 .column-left, .column-centre, .column-right {
@@ -203,7 +257,6 @@ main {
 
 #bt2_1 a {
 	color: black;
-	transition: var(--hover-transition-time);
 }
 
 #bt2_1 a:hover {
@@ -251,7 +304,195 @@ main {
 	width: 100%;
 }
 
+/* ~*~*~*~*~*~* Centre Column *~*~*~*~*~*~ */
 
+/* ===== CC Images ===== */
+/* Flower divider */
+#fh4 img {
+	width: 100%;
+}
+
+/* Geocities buttons */
+#fh5 img {
+	height: 30px;
+}
+
+#fh5 #fh5r {
+	height: 35px;
+	transform: translate(0px, -2px);
+}
+
+@media only screen and (max-width: 1270px) {
+	#fh5 img {
+		height: 20px;
+	}
+
+	#fh5 #fh5r {
+		height: 25px;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	#fh5 img {
+		height: 15px;
+	}
+
+	#fh5 #fh5r {
+		height: 20px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#fh5 img {
+		height: 20px;
+	}
+
+	#fh5 #fh5r {
+		height: 25px;
+	}
+}
+
+/* ===== What’s your vibe? Find some tunes to listen to ===== */
+#bt2_2 {
+	background-color: var(--bt2-2-color);
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+#bt2_2 a {
+	color: white;
+	font-weight: normal;
+	font-style: italic;
+}
+
+#bt2_2 a:hover {
+	color: var(--bt2-2-tint);
+}
+
+#bt2_2 img {
+	width: var(--medium-font);
+    height: var(--medium-font);
+}
+
+/* ===== Grid 1 ===== */
+#grid_1 {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+/* ===== Musings on interacting with the Web ... ===== */
+#bt1_2 {
+	border: solid 2px var(--bt1-2-color);
+	width: calc(100% - 6px);
+	margin-left: 0;
+}
+
+@media only screen and (max-width: 1400px) {
+	#bt1_2 {
+		font-size: var(--small-font);
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+	#grid_1 {
+		grid-template-columns: 70% 30%;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	#grid_1 {
+		grid-template-columns: auto;
+	}
+	#bt1_2 {
+		font-size: var(--medium-font);
+	}
+}
+
+#bt1h_2 {
+	background-color: var(--bt1-2-color);
+}
+
+#bt1_2 p {
+	color: var(--bt1-2-color);
+	border-bottom: solid 2px var(--bt1-2-color);
+}
+
+#bt1_2 a {
+	color: var(--bt1-2-color);
+}
+
+#bt1_2 a:hover {
+	color: var(--bt1-2-tint);
+}
+
+#bt1_2 p:last-child {
+	border-bottom: none;
+}
+
+/* ===== My dream working environment ===== */
+#bt3_2 {
+	width: calc(100% - 12px);
+	margin-right: 0;
+	background-color: var(--bt3-2-color);
+	font-size: var(--small-font);
+	color: white;
+}
+
+#bt3_2 img {
+	width: 100%;
+}
+
+/* ===== The gifs on this page were found using GifCities! ===== */
+#bt2_3 {
+	background-color: var(--bt2-3-color);
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+#bt2_3 a {
+	color: white;
+}
+
+#bt2_3 a:hover {
+	color: var(--bt2-3-tint);
+}
+
+/* ~*~*~*~*~*~* Right Column *~*~*~*~*~*~ */
+
+/* ===== RC Images ===== */
+#fh3 img {
+	width: 9%;
+	object-fit: cover;
+}
+
+#fh3 #fh3m {
+	width: 11%;
+}
+
+/* ===== I know you’re busy, but take a moment ===== */
+#bt2_4 {
+	/* TODO */
+	background-color: var(--bt2-4-color);
+	color: black;
+	text-align: center;
+	font-weight: bold;
+}
+
+#bt2_4 .cell {
+	background-color: white;
+}
+
+#bt2_4 a {
+	color: white;
+}
+
+#bt2_4 a:hover {
+	color: var(--bt2-4-color);
+	text-shadow: 1px 1px var(--bt2-4-color);
+}
 
 
 
