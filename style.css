@@ -222,6 +222,10 @@ nav a:active {
 	}
 }
 
+.right-column .section-end-padding {
+	height: 20px;
+}
+
 /* +++ Toggle +++ */
 /* I snagged this neat little hack from here: https://dabblet.com/gist/1506530 */
 input[type=checkbox] {
@@ -286,18 +290,20 @@ label:active {
 }
 
 #home .headshot-hidden {
+	display: none;
 	animation: fadeout 0.2s;
 	opacity: 0;
 }
 
 #home .headshot-visible {
+	display: block;
 	animation: fadein 0.2s;
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 @keyframes fadeout {
-	0%   {opacity: 0.8;}
-	10%  {opacity: 0.75;}
+	0%   {opacity: 0.9;}
+	10%  {opacity: 0.8;}
 	20%  {opacity: 0.7;}
 	30%  {opacity: 0.6;}
 	40%  {opacity: 0.5;}
@@ -319,14 +325,14 @@ label:active {
 	60%  {opacity: 0.5;}
 	70%  {opacity: 0.6;}
 	80%  {opacity: 0.7;}
-	90%  {opacity: 0.75;}
-	100% {opacity: 0.8;}
+	90%  {opacity: 0.8;}
+	100% {opacity: 0.9;}
 }
 
 #home #headshot {
 	position: absolute;
 	top: 80px;
-	left: calc(50% - 110px);
+	left: calc(50% - 260px);
 	width: 250px;
 	border-radius: var(--primary-border-radius);
 }
@@ -334,7 +340,7 @@ label:active {
 @media only screen and (max-width: 724px) {
 	#home #headshot {
 		width: 150px;
-		left: calc(50% - 60px);
+		left: calc(50% - 85px);
 		top: 40px;
 	}
 }
@@ -407,7 +413,11 @@ input[id=programming-toggle-2]:checked ~ #ptd-2 {
 
 input[id=programming-toggle-3]:checked ~ #ptd-3 {
 	margin: 0 20px;
-	margin-bottom: 20px;
+	display: inline-block;
+}
+
+input[id=programming-toggle-4]:checked ~ #ptd-4 {
+	margin: 0 20px;
 	display: inline-block;
 }
 

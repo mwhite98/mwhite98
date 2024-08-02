@@ -47,7 +47,7 @@ https://docs.google.com/document/d/1yXoMWGI0JcoJWTlBNbbUSMkJ2LxUMdQWtTrbFH5LZ1g/
 <html lang="en">
 
 <head>
-	<title>Myla White’s corner of the internet</title>
+	<title>myla white</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
@@ -124,8 +124,10 @@ https://docs.google.com/document/d/1yXoMWGI0JcoJWTlBNbbUSMkJ2LxUMdQWtTrbFH5LZ1g/
 			<!-- SECTION: HOME -->
 			<section id="home" class="hidden">
 				<h1 class="centre-items">About me</h1>
-				<img class="headshot-initial-state" id="headshot" src="assets/me.png" alt="Headshot of Myla" aria-hidden="true">
-				<p><span id="headshot-phrase">I am a software engineer and science communicator</span> based out of <a href="https://native-land.ca/" target="_blank">Vancouver, British Columbia</a>. I graduated from the University of British Columbia in 2021 with a Bachelor of Science in Cognitive Systems and an interest in the social impacts of tech, the ethics of engineers, and a <a href="https://web.archive.org/web/20191105090859/http://www.uzine.net/article63.html" target="_blank">love for the indie web</a>. My passions typically manifest in more front-end roles — in my free time, I love to build personal websites — but I have experience working as a gameplay engineer and a full-stack engineer. I am currently working as a C++ engineer at Electronic Arts. In the past, I’ve worked as a science journalist and editor, as a digital content coordinator, and as a server at a fish n’ chips restaurant. My writing has been recognized by the JHM awards. I love talking about the romantic potential of the web, users assuming their agency on the internet, and internet pop culture. This site is a record of my work, a starting point for future opportuntities, and a catalogue of my interests.</p>
+				<div class="sec-content-wrapper" id="home-content-wrapper">
+					<img class="headshot-initial-state" id="headshot" src="assets/me.png" alt="Headshot of Myla" aria-hidden="true">
+				    <p><span id="headshot-phrase">I am a software engineer and science communicator</span> based out of <a href="https://native-land.ca/" target="_blank">Vancouver, British Columbia</a>. I graduated from the University of British Columbia in 2021 with a Bachelor of Science in <a href="https://cogsys.ubc.ca/about-cogs-2/" target="_blank">Cognitive Systems</a> and an interest in the social impacts of tech, the ethics of engineers, and a <a href="https://web.archive.org/web/20191105090859/http://www.uzine.net/article63.html" target="_blank">love for the indie web</a>. My passions typically manifest in more front-end roles — in my free time, I love to build personal websites — but I have experience working as a gameplay engineer and a full-stack engineer. I am currently working as a full-stack extensibility engineer in the networking industry. In the past, I’ve worked as a science journalist and editor, as a digital content coordinator, and as a server at a fish n’ chips restaurant. My writing has been recognized by the JHM awards. I love talking about the romantic potential of the web, science fiction and fantasy media, girlhood, and pop culture. You’ll also find me wiggling in many different capacities — in my free time I dance, do martial arts, and get outside as much as possible.</p>
+				</div>
 			</section>
 
 			<!-- SECTION: PROGRAMMING -->
@@ -134,18 +136,21 @@ https://docs.google.com/document/d/1yXoMWGI0JcoJWTlBNbbUSMkJ2LxUMdQWtTrbFH5LZ1g/
 				<div class="sec-content-wrapper" id="programming-content-wrapper">
 					<p>Here are some examples of my programming.</p>
 
-					<p>I <strong>currently</strong> work as a <strong>C++ engineer</strong> at <strong>Electronic Arts</strong>.</p>
-
-					<p>I am <strong>currently</strong> volunteering as a <strong>web developer</strong> with <strong>Radical Engineers</strong> to assist <strong>ProxyAddress</strong> in redisgning their website to be responsive and more user-friendly.</p>
+					<!-- Arista -->
+					<label for="programming-toggle-4"><p>I <strong>currently</strong> work as an <strong>extensibility engineer</strong> at <strong>Arista Networks</strong>.</p></label>
+					<input type="checkbox" id="programming-toggle-4">
+					<div class="toggle-div" id="ptd-4">
+						❊ I work with customers to develop custom software solutions for their networks when our out-of-the-box solutions don't quite meet their needs.<br>
+						<strong>Technologies: JavaScript, React.js, Next.js, Git, GCP</strong>
+					</div>
 
 					<p><a href="projects/personal-website.html">I programmed this <strong>website</strong>. ☞</a></p>
 
 					<!-- Electronic Arts -->
-					<label for="programming-toggle-1"><p>From <strong>May 2020 to August 2020</strong>, I worked as a <strong>Gameplay Engineer Co-op</strong> at <strong>Electronic Arts</strong> on FIFA Mobile.</p></label>
-					<input type="checkbox" id="programming-toggle-1">
-					<div class="toggle-div" id="ptd-1">
-						❊ Garnered both a high- and low-level understanding of gameplay through implementing fixes and improvements of gameplay sub-features, including front-end functionality using <i>Haxe</i>, the player AI system and the physics behind Head to Head matches and skill games using <i>C++</i><br>
-						❊ Because of my interest in storytelling and game design, also actively sought out and established relationships with various employees in the design portion of the game<br>
+					<label for="programming-toggle-3"><p>From <strong>May 2020 to August 2020</strong>, I worked as a <strong>Gameplay Engineer Co-op</strong> at <strong>Electronic Arts</strong> on FIFA Mobile.</p></label>
+					<input type="checkbox" id="programming-toggle-3">
+					<div class="toggle-div" id="ptd-3">
+						❊ Garnered both a high- and low-level understanding of gameplay through implementing fixes and improvements of gameplay sub-features, including front-end functionality using <i>Haxe</i>, the player AI system and the physics behind the game using <i>C++</i><br>
 						<strong>Technologies: C++, Haxe, Perforce, Visual Studio debugger, internal testing frameworks</strong>
 					</div>
 
@@ -155,21 +160,20 @@ https://docs.google.com/document/d/1yXoMWGI0JcoJWTlBNbbUSMkJ2LxUMdQWtTrbFH5LZ1g/
 					<div class="toggle-div" id="ptd-2">
 						❊ Interned under Realtor.com’s Head Architect, leading to collaborations with InfoSec, DevOps, and Cloud Services to develop high level knowledge of the development lifecycle, best practices, and testing methodology<br>
 						❊ Designed and implemented a <i>Python</i> and <i>Jenkins</i> application, paired with a <i>Splunk</i> dashboard and containerized in <i>Docker</i>, to collect metadata and security information for all deployed systems at the company, resulting in daily logs used by individual developers and department managers<br>
-						❊ Designed, implemented, and tested a <i>Javascript</i> (<i>Node.js, React.js, Express, Emotion</i>) and <i>ElasticSearch</i> (on <i>AWS</i>) application to serve as the front-end for the Python app, resulting in a more user-centric experience with search and stemming capabilities and 100% project coverage<br>
-						❊ Participated in and presented at weekly Machine Learning, Architecture, and DevOps meetings, updated and created various Architectural documentation, and participated in weekly Agile sprint meetings<br>
+						❊ Designed, implemented, and tested a <i>JavaScript</i> (<i>Node.js, React.js, Express, Emotion</i>) and <i>ElasticSearch</i> (on <i>AWS</i>) application to serve as the front-end for the Python app, resulting in a more user-friendly and intuitive experience with search and stemming capabilities<br>
 						<strong>Technologies: Python, Node.js, React.js, Splunk, Elasticsearch, Jenkins, Jira, Confluence, Docker, Git</strong>
 					</div>
 
 					<p><a href="projects/random-mondrians.html">In <strong>December 2018</strong>, using Haskell and HTML I created a <strong>Mondrian Art Generator</strong> to output artwork in the style of Piet Mondrian, based on the users’ characteristics and interests. ☞</a></p>
 
 					<!-- For the Love of the Game -->
-					<label for="programming-toggle-3"><p>From <strong>April 2018 to August 2018</strong>, I worked as the <strong>Digital Content Creator</strong> at <strong>For the Love of the Game</strong>.</p></label>
-					<input type="checkbox" id="programming-toggle-3">
-					<div class="toggle-div" id="ptd-3">
-						❊ Designed and implemented a three-day online workshop, including creating all webpages hosting the workshop using <i>CSS, HTML</i>, and <i>WordPress</i>, all marketing, and preparing and editing all of the digital content presented<br>
-						❊ Achieved a 30% increase in social media interaction and a 500% increase in sales due to development of brand identity, and design and production of original graphics and social videos using <i>PhotoShop</i> and <i>Canva</i><br>
+					<label for="programming-toggle-1"><p>From <strong>April 2018 to August 2018</strong>, I worked as the <strong>Digital Content Creator</strong> at <strong>For the Love of the Game</strong>.</p></label>
+					<input type="checkbox" id="programming-toggle-1">
+					<div class="toggle-div" id="ptd-1">
+						❊ Designed and implemented a three-day online workshop, including developing all webpages hosting the workshop using <i>CSS, HTML</i>, and <i>WordPress</i>, creating all promotional content for social media, and editing all of the digital content presented<br>
 						<strong>Technologies: CSS, HTML, PhotoShop, Final Cut Pro, Canva, Wordpress</strong>
 					</div>
+					<div class="section-end-padding"></div>
 				</div>
 			</section>
 
@@ -180,26 +184,24 @@ https://docs.google.com/document/d/1yXoMWGI0JcoJWTlBNbbUSMkJ2LxUMdQWtTrbFH5LZ1g/
 					<p>Here are some examples of my writing.</p>
 
 					<!-- The Ubyssey -->
-					<label for="writing-toggle-1"><p>From <strong>April 2020 to April 2021</strong>, I worked as the <strong>Science Editor</strong> at <strong>The Ubyssey</strong>, western Canada’s largest student newspaper.</p></label>
+					<label for="writing-toggle-1"><p>From <strong>April 2020 to April 2021</strong>, I worked as the <strong>Science Editor</strong> at <strong><i>The Ubyssey</i></strong>, western Canada’s largest student newspaper.</p></label>
 					<input type="checkbox" id="writing-toggle-1">
 					<div class="toggle-div" id="wtd-1">
 						❊ Managed team of over 40 student journalists, including assigning stories based on experience level and expertise, mentoring new journalists, and editing all section stories for accuracy, accessibility, and style<br>
-						❊ Worked cross-functionally with visuals and web development teams in designing and programming online layouts for special articles using <i>CSS, HTML</i>, and <i>JavaScript</i><br>
-						❊ Pitched stories catering to a variety of interests and writing styles bi-weekly, including data journalism, science behind current events, and spotlights on UBC’s student scientists, resulting in Science becoming the second-most read section at the paper behind News<br>
-						❊ Created data visualizations using <i>Tableau</i> for various stories resulting in 13,000+ total visualization views<br>
+						❊ Worked cross-functionally with visuals and web development teams in designing and programming online layouts for special articles using <i>CSS</i>, <i>HTML</i>, and <i>JavaScript</i><br>
 						❊ Developed bi-weekly workshops for Science volunteers on topics such as “Science Journalism 101” and “Bias in Science”, increasing workshop attendance from 1–2 attendees the year prior to 8–15<br>
-						❊ Designed and copyedited print pages for western Canada’s largest student newspaper using <i>InDesign</i><br>
-						<strong>Technologies: InDesign, Tableau, HTML, Sass, JavaScript, Docker</strong>
+						❊ Spearheaded production of health and climate science content during the 2020 BC provincial election and fact-checked candidate debate<br>
+						<strong>Technologies: InDesign, Tableau, HTML, SCSS, JavaScript, Docker</strong>
 					</div>
 
-					<p>Below are some highlights from my time at The Ubyssey. You can find a full catalogue of my stories <a href="https://www.ubyssey.ca/authors/myla-white/" target="_blank">here</a>.</p>
+					<p>Below are some highlights from my time at <i>The Ubyssey</i>. You can find a full catalogue of my stories <a href="https://www.ubyssey.ca/authors/myla-white/" target="_blank">here</a>.</p>
 
 					<p class="writing-ex"><a href="https://www.ubyssey.ca/science/where-we-draw-the-line/" target="_blank">❋ <strong>Where we draw the line</strong> — Currently, there is no requirement to include ethical reasoning or the implications of tech in UBC’s computer science curriculum. How does the department ensure morals are kept in students’ minds?</a></p>
 
 					<p class="writing-ex"><a href="https://www.ubyssey.ca/science/can-chemistry-change-the-world-lecture/" target="_blank">❋ <strong>Chemistry can change the world. One UBC prof is inspiring students to make it happen</strong> — In his final lecture of the year, Dr. Zachary Hudson discussed the relationship between chemistry and the climate crisis. The takeaway has resonated with the entire UBC community.</a></p>
 
 					<p class="writing-ex">
-						<a href="https://www.ubyssey.ca/science/311-data-covid-19/" target="_blank">❋ <strong>Noisy, nosey and nurturing: An analysis of Vancouver’s non-emergency line during COVID-19</strong> — The Ubyssey analyzed the content data on the city’s non-emergency phone line to catch a glimpse of how things on a municipal level have been affected by the COVID-19 pandemic.</a><br>
+						<a href="https://www.ubyssey.ca/science/311-data-covid-19/" target="_blank">❋ <strong>Noisy, nosey and nurturing: An analysis of Vancouver’s non-emergency line during COVID-19</strong> — <i>The Ubyssey</i> analyzed the content data on the city’s non-emergency phone line to catch a glimpse of how things on a municipal level have been affected by the COVID-19 pandemic.</a><br>
 						This article was nominated for Best Data Journalism at the 2021 JHM Awards.
 					</p>
 
@@ -275,7 +277,7 @@ https://docs.google.com/document/d/1yXoMWGI0JcoJWTlBNbbUSMkJ2LxUMdQWtTrbFH5LZ1g/
 			<!-- SECTION: CONTACT -->
 			<section id="contact" class="hidden">
 				<h1 class="centre-items">Contact</h1>
-				<p>You can find me on <a href="https://www.are.na/myla" target="_blank">Are.na</a>, <a href="https://twitter.com/mylawhite_" target="_blank">Twitter</a>, <a href="https://github.com/mwhite98" target="_blank">Github</a>, and <a href="https://www.linkedin.com/in/myla-white/" target="_blank">LinkedIn</a>.</p>
+				<p>You can find me on <a href="https://www.are.na/myla" target="_blank">Are.na</a>, <a href="https://github.com/mwhite98" target="_blank">Github</a>, and <a href="https://www.linkedin.com/in/myla-white/" target="_blank">LinkedIn</a>.</p>
 				<p>You can reach me at <a href="mailto:mylawhite@outlook.com">mylawhite@outlook.com</a>.</p>
 				<p>Resume available upon request.</p>
 			</section>

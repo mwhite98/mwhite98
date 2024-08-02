@@ -26,14 +26,14 @@ function docReady(func) {
   }
 }
 // TODO uncomment when going live
-// docReady(function() {
-//   sectionHome.classList.toggle("hidden");
-// });
+docReady(function() {
+  sectionHome.classList.toggle("hidden");
+});
 
 // TODO only for dev pruposes
-docReady(function() {
-  sectionProgramming.classList.toggle("hidden");
-});
+// docReady(function() {
+//   sectionKindWords.classList.toggle("hidden");
+// });
 
 navHome.addEventListener("click", function() {
   if (sectionHome.classList.contains("hidden")) {
