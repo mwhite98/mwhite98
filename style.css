@@ -25,8 +25,8 @@
 :root {
 	/* Colours */
 	--beige:                #FFFBF0;
-	--light-grey: 			#D6D5D5;
-	--dark-grey: 			#5E5E5E;
+	--light-grey: 			    #D6D5D5;
+	--dark-grey: 		      	#5E5E5E;
 	--primary-site-color:   #849468;		/* green */
 	--secondary-site-color: #54A4CC;		/* blue */
 
@@ -97,6 +97,11 @@ footer p {
 	margin: 0;
 	padding: 10px;
 	font-size: var(--medium-font);
+}
+
+footer a {
+	color: black;
+	transition: var(--hover-transition-time);
 }
 
 @media only screen and (max-width: 524px) {

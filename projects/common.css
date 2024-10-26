@@ -96,6 +96,15 @@ p > a:active {
 	transition: var(--hover-transition-time);
 }
 
+li {
+	font-size: var(--large-font);
+}
+
+li::marker {
+	content: '♥︎ ';
+	font-size: 24px;
+}
+
 figure {
 	margin: 20px auto;
 	width: 75%;
@@ -113,42 +122,65 @@ figure figcaption {
 	width: 100%;
 }
 
+/* ~*~*~*~*~*~* DLL Projects *~*~*~*~*~*~ */
 
+/* #dll-wrapper section {
+	margin-bottom: 20px;
+} */
 
+#dll-wrapper .dll-project-divider {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
 
+#dll-wrapper li a {
+	color: black;
+}
 
+#dll-wrapper li:has(> a:hover)::marker {
+	color: lightpink;
+	transition: var(--hover-transition-time);
+}
 
+#dll-wrapper li a:hover {
+	color: lightpink;
+	transition: var(--hover-transition-time);
+}
 
+#dll-wrapper .dll-project-summary {
+	display: flex;
 
+	/* border: 1px solid var(--dark-grey); */
+}
 
+#dll-wrapper .dll-project-summary .dll-project-left {
+	width: 35%;
+	display: flex;
+	justify-content: center;
+	/* border-right: 1px solid var(--dark-grey); */
+	padding: 10px;
+}
 
+#dll-wrapper .dll-project-summary .dll-project-left img {
+	width: 100%;
+}
 
+#dll-wrapper .dll-project-summary .dll-project-right {
+	width: 65%;
+}
 
+#dll-wrapper .dll-project-summary .dll-project-right h2 {
+	font-family: Perfect-Regular;
+	color: var(--primary-site-color);
+	font-size: 58px;
+	margin: 5px 10px;
+	/* border-bottom: 1px solid var(--dark-grey); */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#dll-wrapper .dll-project-summary .dll-project-right p {
+	text-align: justify;
+	font-size: var(--medium-font);
+	margin: 5px 10px;
+}
